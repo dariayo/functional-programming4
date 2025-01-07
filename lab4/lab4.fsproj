@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Giraffe" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="FSharp.Data" Version="4.2.8" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogCollector/Collector.fs" />
+    <Compile Include="LogCollector/Parser.fs" />
+    <Compile Include="LogCollector/MetricsAnalyzer.fs" />
+    <Compile Include="ReportGenerator/ReportTemplates.fs" />
+    <Compile Include="ReportGenerator/MarkdownReport.fs" />
+    <Compile Include="UserInterface/LogViews.fs" />
+    <Compile Include="UserInterface/ReportsViews.fs" />
+    <Compile Include="UserInterface/API.fs" />
+    <Compile Include="UserInterface/WebApp.fs" />
+    <Compile Include="Utils/DockerHelper.fs" />
+    <Compile Include="Utils/LogFormatter.fs" />
+    <Compile Include="Utils/Config.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UserInterface/Static/**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

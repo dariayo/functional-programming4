@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.report-content {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.report-link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.report-link:hover {
+    text-decoration: underline;
+}
+
+/* Стиль для содержимого логов */
+.log-content {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+/* Стили для списка логов */
+#logs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#logs li {
+    margin: 5px 0;
+}
+
+.log-link {
+    color: #007BFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.log-link:hover {
+    text-decoration: underline;
+}

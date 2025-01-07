@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Report</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Run Report</h1>
+    </header>
+    <form id="runReportForm">
+        <label for="containerName">Container Name:</label>
+        <input type="text" id="containerName" required />
+        <button type="submit">Run Report</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('runReportForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const containerName = document.getElementById('containerName').value;
+            fetch('/api/runReport', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ containerName: containerName })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const outputDiv = document.getElementById('output');
+                    console.log(data)
+                    if (data.success) {
+                        outputDiv.textContent = "Report generated successfully:\n${data.data}";
+                    } else {
+                        outputDiv.textContent = "Error: ${data.errorMessage}";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

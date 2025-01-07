@@ -1,0 +1,67 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+      - DOCKER_ENDPOINT=http://docker:2375
+    depends_on:
+      - docker
+    networks:
+      - lab4-network
+      - shared-network
+
+  docker:
+    image: docker:20.10-dind
+    privileged: true
+    volumes:
+      - /var/lib/docker
+    networks:
+      - lab4-network
+      - shared-network
+  
+  user-service:
+    build:
+      context: ./example/user-service
+    ports:
+      - "8084:8084"
+    networks:
+      - lab4-network
+      - shared-network
+
+  message-service:
+    build:
+      context: ./example/message-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - user-service
+    networks:
+      - lab4-network
+      - shared-network
+
+  like-service:
+    build:
+      context: ./example/like-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - user-service
+      - message-service
+    networks:
+      - lab4-network
+      - shared-network
+
+networks:
+  lab4-network:
+    external: true
+  shared-network:
+    external: true
