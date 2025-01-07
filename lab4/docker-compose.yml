@@ -30,7 +30,7 @@ services:
   
   user-service:
     build:
-      context: ./example/user-service
+      context: ./services/user-service
     ports:
       - "8084:8084"
     networks:
@@ -39,7 +39,7 @@ services:
 
   message-service:
     build:
-      context: ./example/message-service
+      context: ./services/message-service
     ports:
       - "8081:8081"
     depends_on:
@@ -50,7 +50,7 @@ services:
 
   like-service:
     build:
-      context: ./example/like-service
+      context: ./services/like-service
     ports:
       - "8082:8082"
     depends_on:
