@@ -14,9 +14,10 @@ WORKDIR /app
 COPY --from=build /app/out .
 COPY --from=build /app/UserInterface/Static ./Static
 
-# Установка ping
-RUN apt-get update && apt-get install -y iputils-ping
+# Установка ping и Docker CLI
+RUN apt-get update && apt-get install -y iputils-ping docker.io
 
+# Копируем скрипт report.sh
 COPY ./scripts/report.sh /app/scripts/report.sh
 
 # Убедитесь, что скрипт имеет права на выполнение
