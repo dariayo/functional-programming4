@@ -61,7 +61,6 @@ pre {
     text-decoration: underline;
 }
 
-/* Стиль для содержимого логов */
 .log-content {
     margin-top: 20px;
     padding: 20px;
@@ -95,3 +94,45 @@ pre {
 .log-link:hover {
     text-decoration: underline;
 }
+
+.list5b {
+    padding:0;
+    list-style: none;
+}    
+.list5b li {
+    position: relative;
+    padding: 10px 30px;
+    background: linear-gradient(to left, #EFEFEF 0%, #FFF, #EFEFEF);
+    border: 2px solid #C0C0C0;
+    color: #506a6b;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
+    margin-bottom: 5px;
+    text-align:center;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.list5b li:hover {
+    border: 2px solid #ADCEE9;
+}
+.list5b li:before {
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(to left, #E2F0FA 0%, #FFF, #E2F0FA);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: -1;
+}
+.list5b li:hover:before {
+    width: 100%;
+    opacity: 1;
+}   
