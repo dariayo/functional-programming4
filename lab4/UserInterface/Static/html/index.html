@@ -44,6 +44,36 @@
                 });
         });
     </script>
+
+    <form id="curlRequestForm">
+        <label for="curlRequest">Curl Request:</label>
+        <input type="text" id="curlRequest" required />
+        <button type="submit">Send Request and Collect Logs</button>
+    </form>
+    <script>
+        document.getElementById('curlRequestForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const curlRequest = document.getElementById('curlRequest').value;
+            fetch('/api/sendCurlRequest', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ curlRequest: curlRequest })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const outputDiv = document.getElementById('output');
+                    if (data.success) {
+                        outputDiv.textContent = `Request successful. Logs collected and report generated`;
+                    } else {
+                        outputDiv.textContent = `Error: ${data.errorMessage}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
 </body>
 
 </html>

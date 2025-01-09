@@ -14,13 +14,19 @@ WORKDIR /app
 COPY --from=build /app/out .
 COPY --from=build /app/UserInterface/Static ./Static
 
-# Установка ping и Docker CLI
-RUN apt-get update && apt-get install -y iputils-ping docker.io
+RUN apt-get update && apt-get install -y \
+    iputils-ping \
+    curl \
+    docker.io
 
-# Копируем скрипт report.sh
+RUN curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" \
+    -o /usr/local/bin/docker-compose && \
+    chmod +x /usr/local/bin/docker-compose
+
 COPY ./scripts/report.sh /app/scripts/report.sh
 
-# Убедитесь, что скрипт имеет права на выполнение
+COPY ./docker-compose.yml /app/docker-compose.yml
+
 RUN chmod +x /app/scripts/report.sh
 
 EXPOSE 8080
