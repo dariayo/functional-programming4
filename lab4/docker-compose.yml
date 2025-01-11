@@ -15,7 +15,6 @@ services:
       - DOTNET_ENVIRONMENT=Production
     networks:
       - lab4-network
-      - shared-network
 
 
 
@@ -26,7 +25,6 @@ services:
       - /var/lib/docker
     networks:
       - lab4-network
-      - shared-network
   
   user-service:
     build:
@@ -35,7 +33,6 @@ services:
       - "8084:8084"
     networks:
       - lab4-network
-      - shared-network
 
   message-service:
     build:
@@ -46,7 +43,6 @@ services:
       - user-service
     networks:
       - lab4-network
-      - shared-network
 
   like-service:
     build:
@@ -58,10 +54,7 @@ services:
       - message-service
     networks:
       - lab4-network
-      - shared-network
 
 networks:
   lab4-network:
-    external: true
-  shared-network:
     external: true

@@ -27,6 +27,7 @@ COPY ./scripts/report.sh /app/scripts/report.sh
 
 COPY ./docker-compose.yml /app/docker-compose.yml
 
+
 RUN chmod +x /app/scripts/report.sh
 
 EXPOSE 8080

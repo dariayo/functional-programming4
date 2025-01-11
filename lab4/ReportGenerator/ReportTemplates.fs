@@ -1,6 +1,6 @@
 module ReportGenerator.ReportTemplates
 
-let getMarkdownTemplate () =
+let getEnhancedMarkdownTemplate () =
     """
 # Log Report for {containerName}
 
@@ -12,6 +12,31 @@ let getMarkdownTemplate () =
 - **Errors:** {errorCount}
 - **Warnings:** {warningCount}
 - **Info:** {infoCount}
+
+---
+
+## Performance Metrics
+- {performanceMetrics}
+
+---
+
+## Key Actions
+- {keyActions}
+
+---
+
+## Potential Improvements or Anomalies
+- {potentialImprovements}
+
+---
+
+## Active Threads
+- {activeThreads}
+
+---
+
+## Request Types
+- {requestTypes}
 
 ---
 

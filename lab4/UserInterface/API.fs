@@ -248,7 +248,7 @@ let sendCurlRequestHandler (next: HttpFunc) (ctx: HttpContext) =
                         |> Seq.ofArray
 
                     let reportPath =
-                        ReportGenerator.MarkdownReport.createAndSaveReport container.ID logEntries
+                        ReportGenerator.MarkdownReport.createAndSaveReport container.Image logEntries
 
                     reportPaths := !reportPaths @ [ reportPath ]
 

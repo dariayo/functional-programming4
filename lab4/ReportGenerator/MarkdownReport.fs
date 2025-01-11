@@ -12,21 +12,24 @@ let initializeReportStorage () =
     if not (Directory.Exists(reportDirectory)) then
         Directory.CreateDirectory(reportDirectory)
         |> ignore
-    
+
 let generateMarkdownReport (containerName: string) (logs: LogEntry seq) =
     let metrics = analyzeMetrics logs
-    let template = getMarkdownTemplate ()
+    let template = getEnhancedMarkdownTemplate ()
 
     let formattedLogs =
         logs
         |> Seq.map (fun log ->
             sprintf
-                "- [%s] **%s**: %s (Source: %s)"
+                "- [%s] **%s**: %s (Source: %s, Thread: %s)"
                 (log.Timestamp.ToString("yyyy-MM-dd HH:mm:ss"))
                 log.LogLevel
                 log.Message
-                log.Source)
+                log.Source
+                log.Thread)
         |> String.concat "\n"
+
+    let formattedRequestTypes = String.concat "\n- " metrics.RequestTypes
 
     let markdownReport =
         template
@@ -35,6 +38,15 @@ let generateMarkdownReport (containerName: string) (logs: LogEntry seq) =
             .Replace("{errorCount}", metrics.ErrorCount.ToString())
             .Replace("{warningCount}", metrics.WarningCount.ToString())
             .Replace("{infoCount}", metrics.InfoCount.ToString())
+            .Replace(
+                "{performanceMetrics}",
+                metrics.PerformanceMetrics
+                |> Option.defaultValue "N/A"
+            )
+            .Replace("{keyActions}", String.concat "\n- " metrics.KeyActions)
+            .Replace("{potentialImprovements}", String.concat "\n- " metrics.PotentialImprovements)
+            .Replace("{activeThreads}", String.concat "\n- " metrics.ActiveThreads)
+            .Replace("{requestTypes}", formattedRequestTypes)
             .Replace("{logs}", formattedLogs)
 
     markdownReport

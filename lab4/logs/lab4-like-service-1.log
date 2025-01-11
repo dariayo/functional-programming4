@@ -1,0 +1,228 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-09T14:45:03.361Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-09T14:45:03.578Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-09T14:45:11.389Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-09T14:45:11.452Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-09T14:45:11.453Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-09T14:45:11.770Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-09T14:45:11.775Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7794 ms
+2025-01-09T14:45:13.942Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-09T14:45:14.002Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 13.239 seconds (process running for 15.815)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-09T14:59:04.791Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-09T14:59:04.832Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-09T14:59:11.038Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-09T14:59:11.121Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-09T14:59:11.121Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-09T14:59:11.368Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-09T14:59:11.374Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6078 ms
+2025-01-09T14:59:13.662Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-09T14:59:13.800Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 12.163 seconds (process running for 15.968)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:05:04.421Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:05:04.424Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:05:10.476Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:05:10.508Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:05:10.509Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:05:10.838Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:05:10.849Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5883 ms
+2025-01-11T12:05:12.269Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:05:12.284Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 9.092 seconds (process running for 11.25)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:11:47.000Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:11:47.014Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:11:49.380Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:11:49.424Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:11:49.424Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:11:49.470Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:11:49.471Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2246 ms
+2025-01-11T12:11:49.919Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:11:49.941Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 4.137 seconds (process running for 5.75)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:22:40.574Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:22:40.609Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:22:44.126Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:22:44.173Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:22:44.173Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:22:44.354Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:22:44.359Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3413 ms
+2025-01-11T12:22:45.728Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:22:45.758Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 6.877 seconds (process running for 9.212)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:28:10.905Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:28:10.913Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:28:13.228Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:28:13.251Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:28:13.251Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:28:13.313Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:28:13.314Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2256 ms
+2025-01-11T12:28:13.849Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:28:13.865Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 4.197 seconds (process running for 6.147)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:35:52.268Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:35:52.284Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:35:55.710Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:35:55.756Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:35:55.756Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:35:55.927Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:35:55.929Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3264 ms
+2025-01-11T12:35:57.382Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:35:57.416Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 7.155 seconds (process running for 9.352)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:42:32.206Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:42:32.228Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:42:36.694Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:42:36.745Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:42:36.746Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:42:36.906Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:42:36.912Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4450 ms
+2025-01-11T12:42:37.918Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:42:37.942Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 7.062 seconds (process running for 8.823)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:50:36.335Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:50:36.416Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:50:42.327Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:50:42.467Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:50:42.469Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:50:42.718Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:50:42.722Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5607 ms
+2025-01-11T12:50:44.166Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:50:44.253Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 10.756 seconds (process running for 12.578)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T12:53:25.291Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T12:53:25.319Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T12:53:30.991Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T12:53:31.010Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T12:53:31.014Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T12:53:31.096Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T12:53:31.098Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5261 ms
+2025-01-11T12:53:32.214Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T12:53:32.227Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 9.743 seconds (process running for 11.822)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T13:07:42.497Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T13:07:42.536Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T13:07:46.568Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T13:07:46.686Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T13:07:46.686Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T13:07:46.995Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T13:07:46.996Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3934 ms
+2025-01-11T13:07:48.745Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T13:07:48.830Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 8.416 seconds (process running for 10.997)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2025-01-11T13:23:23.155Z  INFO 1 --- [           main] com.example.Main                         : Starting Main v3.3.4 using Java 17.0.2 with PID 1 (/app/app.jar started by root in /app)
+2025-01-11T13:23:23.295Z  INFO 1 --- [           main] com.example.Main                         : No active profile set, falling back to 1 default profile: "default"
+2025-01-11T13:23:29.737Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2025-01-11T13:23:29.882Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-11T13:23:29.883Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-01-11T13:23:30.102Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-11T13:23:30.106Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6503 ms
+2025-01-11T13:23:31.256Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2025-01-11T13:23:31.323Z  INFO 1 --- [           main] com.example.Main                         : Started Main in 10.677 seconds (process running for 17.976)

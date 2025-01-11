@@ -1,6 +1,5 @@
 module Program
 
-open System
 open System.IO
 open LogCollector.Parser
 open ReportGenerator.MarkdownReport

@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Docker.DotNet" Version="3.125.15" />
+    <PackageReference Include="Fable.Browser.Dom" Version="2.18.0" />
     <PackageReference Include="Giraffe" Version="7.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="FSharp.Data" Version="4.2.8" />
@@ -15,18 +16,13 @@
 
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogCollector/Collector.fs" />
     <Compile Include="LogCollector/Parser.fs" />
     <Compile Include="LogCollector/MetricsAnalyzer.fs" />
     <Compile Include="ReportGenerator/ReportTemplates.fs" />
     <Compile Include="ReportGenerator/MarkdownReport.fs" />
-    <Compile Include="UserInterface/LogViews.fs" />
-    <Compile Include="UserInterface/ReportsViews.fs" />
     <Compile Include="UserInterface/API.fs" />
     <Compile Include="UserInterface/WebApp.fs" />
-    <Compile Include="Utils/DockerHelper.fs" />
-    <Compile Include="Utils/LogFormatter.fs" />
-    <Compile Include="Utils/Config.fs" />
+    <Compile Include="UserInterface/FetchData.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

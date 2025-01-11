@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Run Report</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-</head>
+    <link rel="stylesheet" href="/Static/css/styles.css" />
+  </head>
 
-<body>
-    <header>
+  <body>
+    <div class="wrapper">
+      <header class="header">
         <h1>Run Report</h1>
-    </header>
-    <form id="runReportForm">
-        <label for="containerName">Container Name:</label>
-        <input type="text" id="containerName" required />
-        <button type="submit">Run Report</button>
-    </form>
+      </header>
+      <div class="container">
+        <div class="body__wrapper">
+          <div class="item__wrapper">
+            <form id="runReportForm" class="report-form">
+              <label for="containerName" class="report-form__label"
+                >Container Name:</label
+              >
+              <div class="report-form__wrapper">
+                <input
+                  type="text"
+                  id="containerName"
+                  class="report-form__input"
+                  placeholder="Enter name"
+                  required
+                />
+                <button class="report-form__button" type="submit">
+                  Run Report
+                </button>
+              </div>
+            </form>
 
-    <div id="output"></div>
+            <div class="output__wrapper">
+              <div class="output__label">Output:</div>
+              <div class="output__body" id="output1"></div>
+            </div>
+          </div>
+          <div class="item__wrapper">
+            <form id="curlRequestForm" class="report-form">
+              <label for="curlRequest" class="report-form__label"
+                >Curl Request:</label
+              >
+              <div class="report-form__wrapper">
+                <input
+                  type="text"
+                  id="curlRequest"
+                  class="report-form__input"
+                  placeholder='curl -X POST "http://user-service:8084/users/register?username=john2"'
+                  required
+                />
+                <button type="submit" class="report-form__button">
+                  Send Request and Collect Logs
+                </button>
+              </div>
+            </form>
+
+            <div class="output__wrapper">
+              <div class="output__label">Output:</div>
+              <div class="output__body" id="output2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="footer">
+          <li class="footer__item">
+            <a class="footer__link" href="http://localhost:8080/logs">Logs</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="http://localhost:8080/reports"
+              >Reports</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <script>
-        document.getElementById('runReportForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const containerName = document.getElementById('containerName').value;
-            fetch('/api/runReport', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ containerName: containerName })
+      document
+        .getElementById("runReportForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const containerName = document.getElementById("containerName").value;
+          fetch("/api/runReport", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ containerName: containerName }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const outputDiv = document.getElementById("output1");
+              outputDiv.classList.add("output__body-bordered");
+              console.log(data);
+              if (data.success) {
+                outputDiv.textContent =
+                  "Report generated successfully";
+              } else {
+                outputDiv.textContent = "Error";
+              }
             })
-                .then(response => response.json())
-                .then(data => {
-                    const outputDiv = document.getElementById('output');
-                    console.log(data)
-                    if (data.success) {
-                        outputDiv.textContent = "Report generated successfully:\n${data.data}";
-                    } else {
-                        outputDiv.textContent = "Error: ${data.errorMessage}";
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+            .catch((error) => {
+              console.error("Error:", error);
+            });
         });
     </script>
-
-    <form id="curlRequestForm">
-        <label for="curlRequest">Curl Request:</label>
-        <input type="text" id="curlRequest" required />
-        <button type="submit">Send Request and Collect Logs</button>
-    </form>
     <script>
-        document.getElementById('curlRequestForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const curlRequest = document.getElementById('curlRequest').value;
-            fetch('/api/sendCurlRequest', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ curlRequest: curlRequest })
+      document
+        .getElementById("curlRequestForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const curlRequest = document.getElementById("curlRequest").value;
+          fetch("/api/sendCurlRequest", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ curlRequest: curlRequest }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const outputDiv = document.getElementById("output2");
+              outputDiv.classList.add("output__body-bordered");
+              if (data.success) {
+                outputDiv.textContent = `Request successful. Logs collected and report generated`;
+              } else {
+                outputDiv.textContent = `Error`;
+              }
             })
-                .then(response => response.json())
-                .then(data => {
-                    const outputDiv = document.getElementById('output');
-                    if (data.success) {
-                        outputDiv.textContent = `Request successful. Logs collected and report generated`;
-                    } else {
-                        outputDiv.textContent = `Error: ${data.errorMessage}`;
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+            .catch((error) => {
+              console.error("Error:", error);
+            });
         });
-    </script>   
-    <ul class="list5b">
-        <li><a href="http://localhost:8080/logs">Логи</a></li>
-        <li><a href="http://localhost:8080/reports">Отчеты</a></li>
-    </ul>
-
-</body>
-
+    </script>
+  </body>
 </html>

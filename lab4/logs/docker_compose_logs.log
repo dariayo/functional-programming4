@@ -1,0 +1,33 @@
+﻿----- Logs after the curl request started at 01/11/2025 12:58:21 -----
+--- Logs from container 97598accecbb6f3f4b6a720b3ec606dafeef01bf3e54cc99494fc14d169eaf91 ---
+2info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+1.1 POST http://localhost:8080/api/sendCurlRequest - application/json 189
+
+
+--- Logs from container 728ff1d3e4fa48a19bc548bf79a4b555ed266cd6f21167c33ea444bdc38fde62 ---
+
+
+--- Logs from container 17fbefde19abe09df02bbc62f2fcbccf55c2504fe43b77b82c39aa80c20beb1b ---
+2025-01-11T12:58:21.788Z  INFO 1 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-11T12:58:21.796Z  INFO 1 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-11T12:58:21.814Z  INFO 1 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2025-01-11T12:58:21.957Z  WARN 1 --- [nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'content' for method parameter type String is not present]
+
+
+--- Logs from container 83d3c2c76e14f9f973b1260430c7e7a2abc0bdd9cb4739ff9fe2dd1b281a13b7 ---
+2025-01-11T12:58:21.361Z  INFO 1 --- [nio-8084-exec-3] com.example.controller.UserController    : Received request to register user with username: john
+2025-01-11T12:58:21.365Z  WARN 1 --- [nio-8084-exec-3] com.example.controller.UserController    : Attempt to register already existing user: john
+
+
+--- Logs from container 2b72b800d01a28a781001b37d8eeedcfd9cc8ac2e0968fbf7bb75d756da0518f ---
+
+
+--- Logs from container fa3c11d43edda04099e9bcb482a1277aa800a78f038b52321606be545d38ea68 ---
+
+
+--- Logs from container f13f3c8e7cd7b9d14bf3fb8df82d524d27e3dc8c41bbe5ed1ae30c2ee552c38d ---
+
+
+--- Logs from container c1bc0cead0a363ebf6b75bb811d8a60bca0c6369720876c1909ea78a1b10df04 ---
+
+
