@@ -4,9 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Docker.DotNet" Version="3.125.15" />
-    <PackageReference Include="Fable.Browser.Dom" Version="2.18.0" />
     <PackageReference Include="Giraffe" Version="7.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="FSharp.Data" Version="4.2.8" />
@@ -15,6 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
 
   </ItemGroup>
+
   <ItemGroup>
     <Compile Include="LogCollector/Parser.fs" />
     <Compile Include="LogCollector/MetricsAnalyzer.fs" />
@@ -22,7 +23,6 @@
     <Compile Include="ReportGenerator/MarkdownReport.fs" />
     <Compile Include="UserInterface/API.fs" />
     <Compile Include="UserInterface/WebApp.fs" />
-    <Compile Include="UserInterface/FetchData.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

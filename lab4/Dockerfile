@@ -30,6 +30,7 @@ COPY ./docker-compose.yml /app/docker-compose.yml
 
 RUN chmod +x /app/scripts/report.sh
 
+
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "lab4.dll"]

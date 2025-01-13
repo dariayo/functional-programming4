@@ -1,0 +1,45 @@
+on:
+    push:
+      branches:
+        - main
+    pull_request:
+      branches:
+        - main
+        
+jobs:
+    build:
+    
+      runs-on: ubuntu-latest
+    
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+        - name: Setup .NET Core SDK
+          uses: actions/setup-dotnet@v4.0.1
+          with:
+            dotnet-version: '9.0.x'
+            
+        - name: Restore dependencies
+          run: |
+            dotnet restore ./lab4/lab4.fsproj
+            dotnet restore lab4/Tests/test.fsproj
+  
+        - name: Build project
+          run: |
+            dotnet build ./
+            dotnet build ./lab4/Tests
+  
+        - name: Settings for linter
+          run: echo "DOTNET_ROLL_FORWARD=latestMajor" >> $GITHUB_ENV
+        - name: Lint
+          run: |
+            dotnet tool install -g dotnet-fsharplint
+            dotnet fsharplint lint ./
+  
+        - name: Formatter fantomas
+          run: |
+            dotnet tool install -g fantomas-tool
+            fantomas ./*.fs 
+          
+        - name: Tests
+          run: dotnet test --logger "console;verbosity=detailed" ./lab4/Tests

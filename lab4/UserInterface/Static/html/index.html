@@ -78,60 +78,6 @@
         </ul>
       </div>
     </div>
-
-    <script>
-      document
-        .getElementById("runReportForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const containerName = document.getElementById("containerName").value;
-          fetch("/api/runReport", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ containerName: containerName }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              const outputDiv = document.getElementById("output1");
-              outputDiv.classList.add("output__body-bordered");
-              console.log(data);
-              if (data.success) {
-                outputDiv.textContent =
-                  "Report generated successfully";
-              } else {
-                outputDiv.textContent = "Error";
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-            });
-        });
-    </script>
-    <script>
-      document
-        .getElementById("curlRequestForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const curlRequest = document.getElementById("curlRequest").value;
-          fetch("/api/sendCurlRequest", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ curlRequest: curlRequest }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              const outputDiv = document.getElementById("output2");
-              outputDiv.classList.add("output__body-bordered");
-              if (data.success) {
-                outputDiv.textContent = `Request successful. Logs collected and report generated`;
-              } else {
-                outputDiv.textContent = `Error`;
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-            });
-        });
-    </script>
+    <script type="module" src="/static/js/Program.fs.js"></script>
   </body>
 </html>

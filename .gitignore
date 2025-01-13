@@ -1,2 +1,9 @@
 lab4/bin
 lab4/obj
+lab4/lab4/front/bin
+lab4/lab4/front/fable_modules
+lab4/lab4/front/node_modules
+lab4/lab4/front/obj
+lab4/lab4/front/package-lock.json
+lab4/Tests/bin
+lab4/Tests/obj

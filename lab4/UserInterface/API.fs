@@ -124,21 +124,21 @@ let runReportHandler (next: HttpFunc) (ctx: HttpContext) =
 
             let scriptPath = "./scripts/report.sh"
 
-            let process = new Process()
-            process.StartInfo.FileName <- "bash"
-            process.StartInfo.Arguments <- $"{scriptPath} {containerName}"
-            process.StartInfo.RedirectStandardOutput <- true
-            process.StartInfo.RedirectStandardError <- true
-            process.StartInfo.UseShellExecute <- false
-            process.StartInfo.CreateNoWindow <- true
+            let proc = new Process()
+            proc.StartInfo.FileName <- "bash"
+            proc.StartInfo.Arguments <- $"{scriptPath} {containerName}"
+            proc.StartInfo.RedirectStandardOutput <- true
+            proc.StartInfo.RedirectStandardError <- true
+            proc.StartInfo.UseShellExecute <- false
+            proc.StartInfo.CreateNoWindow <- true
 
-            process.Start() |> ignore
-            process.WaitForExit()
+            proc.Start() |> ignore
+            proc.WaitForExit()
 
-            let output = process.StandardOutput.ReadToEnd()
-            let error = process.StandardError.ReadToEnd()
+            let output = proc.StandardOutput.ReadToEnd()
+            let error = proc.StandardError.ReadToEnd()
 
-            if process.ExitCode = 0 then
+            if proc.ExitCode = 0 then
                 let successResponse =
                     { Success = true
                       ErrorMessage = None
@@ -212,18 +212,18 @@ let sendCurlRequestHandler (next: HttpFunc) (ctx: HttpContext) =
 
                 let startTime = DateTime.UtcNow
 
-                let process = new Process()
-                process.StartInfo.FileName <- "bash"
-                process.StartInfo.Arguments <- $"-c \"{curlRequest}\""
-                process.StartInfo.RedirectStandardOutput <- true
-                process.StartInfo.RedirectStandardError <- true
-                process.StartInfo.UseShellExecute <- false
-                process.StartInfo.CreateNoWindow <- true
+                let proc = new Process()
+                proc.StartInfo.FileName <- "bash"
+                proc.StartInfo.Arguments <- $"-c \"{curlRequest}\""
+                proc.StartInfo.RedirectStandardOutput <- true
+                proc.StartInfo.RedirectStandardError <- true
+                proc.StartInfo.UseShellExecute <- false
+                proc.StartInfo.CreateNoWindow <- true
 
-                process.Start() |> ignore
-                let output = process.StandardOutput.ReadToEnd()
-                let error = process.StandardError.ReadToEnd()
-                process.WaitForExit()
+                proc.Start() |> ignore
+                let output = proc.StandardOutput.ReadToEnd()
+                let error = proc.StandardError.ReadToEnd()
+                proc.WaitForExit()
 
                 let logsDir = "./logs"
                 let composeLogsFile = Path.Combine(logsDir, "docker_compose_logs.log")
@@ -252,7 +252,7 @@ let sendCurlRequestHandler (next: HttpFunc) (ctx: HttpContext) =
 
                     reportPaths := !reportPaths @ [ reportPath ]
 
-                if process.ExitCode = 0 then
+                if proc.ExitCode = 0 then
                     let successResponse =
                         { Success = true
                           ErrorMessage = None

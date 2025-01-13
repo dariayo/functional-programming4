@@ -9,8 +9,7 @@ type Metrics =
       PerformanceMetrics: string option
       KeyActions: string list
       PotentialImprovements: string list
-      ActiveThreads: string list
-      RequestTypes: string list }
+      ActiveThreads: string list }
 
 let analyzeMetrics (logs: LogEntry seq) =
     let errors =
@@ -53,17 +52,10 @@ let analyzeMetrics (logs: LogEntry seq) =
         )
         |> Seq.toList
 
-    let requestTypes =
-        logs
-        |> Seq.choose (fun log -> log.RequestType)
-        |> Seq.distinct
-        |> Seq.toList
-
     { ErrorCount = Seq.length errors
       WarningCount = Seq.length warnings
       InfoCount = Seq.length infos
       PerformanceMetrics = Some "Initialization Time: **27 ms**\n- No significant delays detected."
       KeyActions = keyActions
       PotentialImprovements = potentialImprovements
-      ActiveThreads = activeThreads
-      RequestTypes = requestTypes }
+      ActiveThreads = activeThreads }

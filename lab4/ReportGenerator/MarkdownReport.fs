@@ -29,8 +29,6 @@ let generateMarkdownReport (containerName: string) (logs: LogEntry seq) =
                 log.Thread)
         |> String.concat "\n"
 
-    let formattedRequestTypes = String.concat "\n- " metrics.RequestTypes
-
     let markdownReport =
         template
             .Replace("{containerName}", containerName)
@@ -46,7 +44,6 @@ let generateMarkdownReport (containerName: string) (logs: LogEntry seq) =
             .Replace("{keyActions}", String.concat "\n- " metrics.KeyActions)
             .Replace("{potentialImprovements}", String.concat "\n- " metrics.PotentialImprovements)
             .Replace("{activeThreads}", String.concat "\n- " metrics.ActiveThreads)
-            .Replace("{requestTypes}", formattedRequestTypes)
             .Replace("{logs}", formattedLogs)
 
     markdownReport

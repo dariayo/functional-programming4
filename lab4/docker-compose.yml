@@ -16,8 +16,6 @@ services:
     networks:
       - lab4-network
 
-
-
   docker:
     image: docker:20.10-dind
     privileged: true

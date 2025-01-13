@@ -182,6 +182,9 @@ pre {
   font-weight: 900;
   font-size: 30px;
   color: #292556;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .logs__no-logs-wrapper {
@@ -266,5 +269,3 @@ pre {
   border-radius: 8px;
   background-color: #e9edf5;
 }
-
-
