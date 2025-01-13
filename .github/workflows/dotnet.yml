@@ -26,7 +26,7 @@ jobs:
   
         - name: Build project
           run: |
-            dotnet build ./
+            dotnet build ./lab4
             dotnet build ./lab4/Tests
   
         - name: Settings for linter
