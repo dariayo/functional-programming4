@@ -35,11 +35,6 @@ jobs:
           run: |
             dotnet tool install -g dotnet-fsharplint
             dotnet fsharplint lint ./
-  
-        - name: Formatter fantomas
-          run: |
-            dotnet tool install -g fantomas-tool
-            fantomas ./*.fs 
           
         - name: Tests
           run: dotnet test --logger "console;verbosity=detailed" ./lab4/Tests
