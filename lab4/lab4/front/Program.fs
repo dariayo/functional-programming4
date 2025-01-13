@@ -8,7 +8,6 @@ type RunReportData = {
     containerName: string
 }
 
-// Определение записи для данных формы "Curl Request"
 type CurlRequestData = {
     curlRequest: string
 }
@@ -16,7 +15,6 @@ type CurlRequestData = {
 let handleRunReportFormSubmit (event: Browser.Types.Event) =
     event.preventDefault()
 
-    // Получение значения поля ввода
     let containerName =
         (document.getElementById("containerName") :?> HTMLInputElement).value
 
@@ -32,7 +30,6 @@ let handleRunReportFormSubmit (event: Browser.Types.Event) =
         let! res = fetch "/api/runReport" defaultProps
         let! txt = res.text()
 
-        // Обработка ответа от сервера
         let outputDiv = document.getElementById("output1") :?> HTMLDivElement
         outputDiv.classList.add("output__body-bordered")
 
