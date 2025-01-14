@@ -46,7 +46,6 @@ let handleRunReportFormSubmit (event: Browser.Types.Event) =
 let handleCurlRequestFormSubmit (event: Browser.Types.Event) =
     event.preventDefault()
 
-    // Получение значения поля ввода
     let curlRequest =
         (document.getElementById("curlRequest") :?> HTMLInputElement).value
 
@@ -62,7 +61,6 @@ let handleCurlRequestFormSubmit (event: Browser.Types.Event) =
         let! res = fetch "/api/sendCurlRequest" defaultProps
         let! txt = res.text()
 
-        // Обработка ответа от сервера
         let outputDiv = document.getElementById("output2") :?> HTMLDivElement
         outputDiv.classList.add("output__body-bordered")
 
@@ -84,5 +82,4 @@ let setupEventListeners () =
         .getElementById("curlRequestForm")
         .addEventListener("submit", handleCurlRequestFormSubmit)
 
-// Инициализация
 setupEventListeners ()
