@@ -35,7 +35,7 @@ let runReportPage =
                     ]
                 ]
             ]
-            script [ _src "/static/js/scripts.js" ] []
+            script [ _type "module"; _src "/static/js/Program.fs.js" ] []
         ]
     ] |> htmlView
 let runLogPage =
@@ -66,7 +66,7 @@ let runLogPage =
                     ]
                 ]
             ]
-            script [ _src "/static/js/scripts.js" ] []
+            script [ _type "module"; _src "/static/js/Program.fs.js" ] []
         ]
     ] |> htmlView
 

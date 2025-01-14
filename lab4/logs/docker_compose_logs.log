@@ -1,21 +1,24 @@
-﻿----- Logs after the curl request started at 01/13/2025 15:02:40 -----
---- Logs from container 65cd929e30f92a6e0813c522e8df8153fc7fe2a220b659fc7a26376d4033ff11 ---
+﻿----- Logs after the curl request started at 01/14/2025 14:45:04 -----
+--- Logs from container e733848b93d86f48a7e9b07dbc3e8a9a12d79188ec614dfa571aa0b6ae3305a0 ---
 2info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
 1.1 POST http://localhost:8080/api/sendCurlRequest - application/json 88
 
 
---- Logs from container ea2508baec4fcc4071a3a397122502d6d956ef37ffbecdc7e85555f2be2e195f ---
+--- Logs from container 12a9afc782e46dac8f6b3f795e99e6828eb3b0932b4dcb17cef9cb83879f2dc1 ---
 
 
---- Logs from container 2c9a19c2b9997d7ab4b39c7b245a097089a3a3c8da389910a8fbb47f2ae76f6c ---
+--- Logs from container 2be3340e6a354ddc0d8a35e4e3279c3b8ec465d3994a1f98f1e0b3aa0e3eb049 ---
 
 
---- Logs from container f393e9b94ea6a8f028a29d610d40a3456850178495afe4172e1da2ed5b3c29b2 ---
-2025-01-13T15:02:40.628Z  INFO 1 --- [nio-8084-exec-2] com.example.controller.UserController    : Received request to register user with username: john
-2025-01-13T15:02:40.646Z  WARN 1 --- [nio-8084-exec-2] com.example.controller.UserController    : Attempt to register already existing user: john
+--- Logs from container 75d3f680cb8f07199198fb0fb78bb4d3d6f09db8949f2710a0772a1a29451331 ---
+2025-01-14T14:45:04.922Z  INFO 1 --- [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-14T14:45:04.935Z  INFO 1 --- [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-14T14:45:04.964Z  INFO 1 --- [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2025-01-14T14:45:05.068Z  INFO 1 --- [nio-8084-exec-1] com.example.controller.UserController    : Received request to register user with username: john
+2025-01-14T14:45:05.071Z  INFO 1 --- [nio-8084-exec-1] com.example.controller.UserController    : User registered successfully: john
 
 
---- Logs from container 6d6a248ccc5b55a65973ba8503824ec71ef01e0dd82356be3e9f3fe60b7f05cf ---
+--- Logs from container b1f030932ab1389f84ef843ee0b264315eceb7d3fc161fbe04533df9e392e092 ---
 
 
 --- Logs from container fa3c11d43edda04099e9bcb482a1277aa800a78f038b52321606be545d38ea68 ---
